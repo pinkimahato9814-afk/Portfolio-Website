@@ -574,6 +574,7 @@ section {
   margin: auto;
   display: grid;
   gap: 24px;
+  position: relative;
 }
 
 .education-row {
@@ -585,23 +586,18 @@ section {
 
 .timeline-marker {
   position: relative;
-  padding: 28px 24px;
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: var(--shadow-soft);
+  padding: 22px 0 22px 42px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  overflow: hidden;
+  gap: 8px;
 }
 
 .timeline-marker::before {
   content: "";
   position: absolute;
-  top: 24px;
-  bottom: 24px;
+  top: -28px;
+  bottom: -28px;
   left: 18px;
   width: 3px;
   border-radius: 999px;
@@ -620,8 +616,16 @@ section {
   box-shadow: 0 0 0 6px rgba(79, 161, 139, 0.18);
 }
 
+.education-row:first-child .timeline-marker::before {
+  top: 34px;
+}
+
+.education-row:last-child .timeline-marker::before {
+  bottom: 34px;
+}
+
 .timeline-label {
-  padding-left: 28px;
+  padding-left: 0;
   color: var(--accent-light);
   font-size: 0.92rem;
   letter-spacing: 0.08em;
@@ -629,7 +633,7 @@ section {
 }
 
 .timeline-year {
-  padding-left: 28px;
+  padding-left: 0;
   font-size: 2rem;
   line-height: 1;
   font-weight: 800;
