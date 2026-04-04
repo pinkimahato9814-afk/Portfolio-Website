@@ -167,6 +167,25 @@
       transform: translateY(-3px);
     }
 
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding: 12px 22px;
+      background: linear-gradient(90deg, #2a7f6b, #77bfa8);
+      color: #fff;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(39, 123, 93, 0.25);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 34px rgba(39, 123, 93, 0.32);
+    }
+
     section {
       padding: 90px 8%;
     }
@@ -205,6 +224,10 @@
       gap: 24px;
     }
 
+    .projects-grid {
+      align-items: stretch;
+    }
+
     .gallery-item {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
@@ -239,6 +262,12 @@
       transition: transform 0.3s, border-color 0.3s;
     }
 
+    .projects-grid .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
     .card:hover {
       transform: translateY(-8px);
       border-color: rgba(79,161,139,0.35);
@@ -252,6 +281,10 @@
     .card p, .card li {
       color: #c9e3d9;
       font-size: 0.97rem;
+    }
+
+    .projects-grid .card p {
+      margin-bottom: 16px;
     }
 
     .education-box {
@@ -420,6 +453,9 @@
       <div class="card fade-up">
         <h3>Portfolio Website</h3>
         <p>A modern responsive personal portfolio website built using HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/pinkimahato9814-afk/Portfolio-Website" target="_blank" class="project-link">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
       </div>
 
 
