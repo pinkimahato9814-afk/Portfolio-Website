@@ -224,6 +224,82 @@
       gap: 24px;
     }
 
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: stretch;
+    }
+
+    .skill-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.2);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    .skill-card p {
+      color: #b8dbcf;
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .skill-item {
+      display: grid;
+      gap: 8px;
+    }
+
+    .skill-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.96rem;
+      color: #e9f6f1;
+    }
+
+    .skill-meta span:last-child {
+      color: #8de0c6;
+      font-weight: 700;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+
+    .skill-level {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #58b89d, #8de0c6);
+      box-shadow: 0 0 18px rgba(93, 204, 173, 0.35);
+    }
+
+    .skill-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: #d5efe6;
+      font-size: 0.97rem;
+    }
+
     .projects-grid {
       align-items: stretch;
     }
@@ -436,13 +512,118 @@
 
   <section class="skills" id="skills">
     <h2 class="section-title fade-up">Skills</h2>
-    <p class="section-subtitle fade-up">Technologies and tools I work with</p>
+    <p class="section-subtitle fade-up">A visual snapshot of the technologies and tools I use most confidently</p>
     <div class="skills-grid">
-      <div class="card fade-up"><h3>Frontend</h3><p>HTML, CSS, Responsive Design, React,</p></div>
-      <div class="card fade-up"><h3>Programming</h3><p>C, C++,Python,Matlab , Django </p></div>
-      <div class="card fade-up"><h3>Tools</h3><p>Git, GitHub, VS Code, Figma, Antigravity,Google Colab</p></div>
-      <div class="card fade-up"><h3>Soft Skills</h3><p>Communication, Teamwork, Time Management, Problem Solving</p></div>
-      <div class="card fade-up"><h3> Database</h3><p>Sql Server, Postgres, Sqlite, Dbeaver</p></div>
+      <div class="skill-card fade-up">
+        <h3>Frontend & Design</h3>
+        <p>I enjoy building clean, responsive interfaces and improving how users experience a product.</p>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-meta"><span>HTML</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>CSS</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Responsive Design</span><span>82%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 82%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>React</span><span>72%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 72%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Figma / UI Thinking</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up">
+        <h3>Programming & Data</h3>
+        <p>My strongest technical interest is using code for problem solving, analysis, and machine learning work.</p>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-meta"><span>Python</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 88%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>C</span><span>78%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 78%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>C++</span><span>76%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 76%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Django</span><span>68%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 68%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>MATLAB</span><span>64%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 64%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up">
+        <h3>Tools & Workflow</h3>
+        <p>I’m comfortable with collaboration tools, coding environments, and the platforms I use for analysis projects.</p>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-meta"><span>Git & GitHub</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>VS Code</span><span>92%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 92%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Google Colab</span><span>84%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 84%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Power BI / Tableau</span><span>74%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 74%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>DBeaver / SQL Tools</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up">
+        <h3>Databases & Collaboration</h3>
+        <p>I work across both technical implementation and team-oriented communication during projects and coursework.</p>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-meta"><span>PostgreSQL</span><span>74%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 74%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>SQLite</span><span>78%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 78%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>SQL Server</span><span>71%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 71%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Communication</span><span>86%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 86%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Problem Solving</span><span>84%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 84%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="skill-note fade-up">
+      These levels represent my current confidence and hands-on experience across each area, and they continue to grow with every project.
     </div>
   </section>
 
